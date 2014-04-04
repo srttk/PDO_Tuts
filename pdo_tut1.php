@@ -26,11 +26,12 @@ Created : April 4  2014
 
 		//Fetching All data
 		$q=$db->query("SELECT * from feedback_tbl");
+		//Count rows
+		clog($q->rowCount());
 		$all_data=$q->fetchAll(PDO::FETCH_ASSOC);
 		clog($all_data);
 
-		//Count rows
-		clog($q->countRows());
+
 		
 
 	
