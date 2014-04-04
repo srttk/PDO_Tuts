@@ -1,28 +1,9 @@
 <?php
+include 'clog.php';
 /*
 Created : April 4  2014 
 */
-	function clog($message){
-
-		if(is_array($message))
-		{
-			echo '<pre>';
-			print_r($message);
-			echo '</pre>';
-			return  TRUE;
-		}
-		if(is_string($message)){
-			echo '<pre>';
-			echo $message;
-			echo '</pre>';	
-			return TRUE;
-		}
-		echo '<pre>';
-		var_dump($message);
-		echo '</pre>';
-
-
-	}
+	
 /* PART 0 :Connecting*/
 	try{
 		$db=new PDO('mysql:host=localhost;dbname=b2b','root','');
@@ -49,6 +30,7 @@ Created : April 4  2014
 		clog($all_data);
 
 		//Count rows
+		clog($q->countRows());
 		
 
 	
