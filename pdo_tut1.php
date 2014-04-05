@@ -1,5 +1,5 @@
 <?php
-include 'clog.php';
+include 'helper.php';
 /*
 Created : April 4  2014 
 */
@@ -7,6 +7,14 @@ Created : April 4  2014
 /* PART 0 :Connecting*/
 	try{
 		$db=new PDO('mysql:host=localhost;dbname=b2b','root','');
+
+		/* by default, the default error mode for PDO is PDO::ERRMODE_SILENT
+			echo $db->errorCode();
+			echo $db->errorInfo();
+			PDO::ERRMODE_SILENT
+			PDO::ERRMODE_WARNING
+			PDO::ERRMODE_EXCEPTION
+		*/
 		$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
 	}
 	catch(PDOException $e){
@@ -15,6 +23,8 @@ Created : April 4  2014
 	}
 
 // Part 1 :Simple SQL query :Select
+
+	/*There's two core ways to accomplish this task: query and execute*/
 	$q=$db->query("SELECT * from feedback_tbl");
 	//var_dump($q);
 		//Fetching data
@@ -28,6 +38,7 @@ Created : April 4  2014
 		$q=$db->query("SELECT * from feedback_tbl");
 		//Count rows
 		clog($q->rowCount());
+		/* You can also set fetch mode */
 		$all_data=$q->fetchAll(PDO::FETCH_ASSOC);
 		clog($all_data);
 
