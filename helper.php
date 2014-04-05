@@ -1,5 +1,5 @@
 <style type="text/css">
-body{
+*{
 	background-color:#000;
 	color: #3A6;
 }
