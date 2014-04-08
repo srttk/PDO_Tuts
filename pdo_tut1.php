@@ -40,6 +40,7 @@ Created : April 4  2014
 		clog($q->rowCount());
 		/* You can also set fetch mode */
 		$all_data=$q->fetchAll(PDO::FETCH_ASSOC);
+		/* To fetch a single row  use $q->fetch() or $q->fetch(FETCH_MODE)*/
 		clog($all_data);
 
 
