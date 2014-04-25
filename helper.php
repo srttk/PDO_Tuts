@@ -8,12 +8,17 @@
 /* Common helper function */
 
 
-function clog($message){
+function clog($message,$json=FALSE){
 
 		if(is_array($message))
 		{
 			echo '<pre>';
-			print_r($message);
+			if($json){
+				echo json_encode($message);
+			}
+			else{
+				print_r($message);
+			}
 			echo '</pre>';
 			return  TRUE;
 		}
