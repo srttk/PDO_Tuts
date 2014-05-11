@@ -1,4 +1,4 @@
 PDO_Tuts
 ========
 
-A PHP PDO tuts
+Step by step PDO (PHP Data Object) Tutorial.
