@@ -9,4 +9,7 @@ class Connection_Test extends PHPUnit_Framework_TestCase{
 	function testConnection(){
 		$this->assertTrue(isset($this->db)==TRUE);
 	}
+	function testSame(){
+		$this->assertSame('name','name');
+	}
 }
