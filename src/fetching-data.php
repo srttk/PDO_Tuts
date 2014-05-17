@@ -16,9 +16,15 @@ var_dump($q->fetchALL());*/
 $q->setFetchMode(PDO::FETCH_OBJ);// Fetch types: PDO::FETCH_ASSOC,PDO::FETCH_OBJ,PDO::FETCH_ARRY
 var_dump($q->fetchAll());*/
 
-# 3 :Setting fetch mdoe (Shortcut)
-$q=$db->query('SELECT * FROM users');
-$q->setFetchMode(PDO::FETCH_OBJ);// Fetch types: PDO::FETCH_ASSOC,PDO::FETCH_OBJ,PDO::FETCH_ARRY
-var_dump($q->fetchAll());
+# 4 :Setting fetch mdoe (Shortcut)
+/*$q=$db->query('SELECT * FROM users');
+var_dump($q->fetchAll(PDO::FETCH_OBJ));*/
+
+# 5 : Using prepare statement
+/*$stmt=$db->prepare("SELECT * FROM users");
+$stmt->execute();
+var_dump($stmt->fetch());*/
+
+# 6 : Selecting with  Where condition using parameters 
 
 
