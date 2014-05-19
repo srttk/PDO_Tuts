@@ -28,8 +28,13 @@ var_dump($stmt->fetch());*/
 # 6 : Selecting with  Where condition using parameters
 /*$stmt=$db->prepare("SELECT * FROM users WHERE id=?");
 //$stmt->bindValue(1,93);//Directly Bind Value or
-$stmt->bindParam(1,$id);
-$id=93;
+	//Or
+//$stmt->bindParam(1,$id);
+//$id=93;
 $stmt->execute();
 var_dump($stmt->fetch());*/
 
+	//Shotcut 
+$stmt=$db->prepare("SELECT * FROM users WHERE id=?");
+$stmt->execute(array(93));
+var_dump($stmt->fetch());
