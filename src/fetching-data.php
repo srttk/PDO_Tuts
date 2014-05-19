@@ -25,6 +25,11 @@ var_dump($q->fetchAll(PDO::FETCH_OBJ));*/
 $stmt->execute();
 var_dump($stmt->fetch());*/
 
-# 6 : Selecting with  Where condition using parameters 
-
+# 6 : Selecting with  Where condition using parameters
+/*$stmt=$db->prepare("SELECT * FROM users WHERE id=?");
+//$stmt->bindValue(1,93);//Directly Bind Value or
+$stmt->bindParam(1,$id);
+$id=93;
+$stmt->execute();
+var_dump($stmt->fetch());*/
 
