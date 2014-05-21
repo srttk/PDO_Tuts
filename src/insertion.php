@@ -16,7 +16,7 @@ if($stmt->rowCount()==1){
 }
 */
 
-# Nmaed Parameters
+# Named Parameters
 
 /*$stmt=$db->prepare('insert into users (email,name) values(:email,:name)');
 
