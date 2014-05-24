@@ -26,7 +26,7 @@ echo "<br/>Number of rows ".$stmt->rowCount();
 */
 
 # 3 bindParam with named parameters
-$stmt=$db->prepare('SELECT * FROM users WHERE id BETWEEN :start AND :end');
+/*$stmt=$db->prepare('SELECT * FROM users WHERE id BETWEEN :start AND :end');
 	
 	$start=93;
 	$end=96;
@@ -37,6 +37,7 @@ $data=$stmt->fetchAll(PDO::FETCH_OBJ);
 var_dump($data);
 // $stmt->rowCount()
 echo "<br/>Number of rows ".$stmt->rowCount();
+*/
 
 
 
